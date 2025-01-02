@@ -5,7 +5,6 @@ function Accordian() {
 
     return (
         <>
-
             <div className="accordion mb-3" id="accordionExample">
                 <div className="accordion-item">
                     <h2 className="accordion-header">
