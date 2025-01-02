@@ -10,7 +10,7 @@ const data = [
             { text: "12th sub Main", href: "/navbar" },
             { text: "6th sub Main", href: "about" },
             { text: "13th sub Main", href: "/" },
-            { text: "14th sub Main", href: "about" }
+            { text: "14th sub Main", href: "/link14" }
         ]
     },
     {
