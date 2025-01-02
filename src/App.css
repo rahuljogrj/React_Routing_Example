@@ -76,8 +76,13 @@
 }
 
 
+#leftNavBar {
+    transition: ease 0.09s;
+}
 
-/* About us page */
+
+
+
 .wrapper {
     overflow: hidden;
 }
