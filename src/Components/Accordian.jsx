@@ -9,11 +9,11 @@ function Accordian() {
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button
-                            className="accordion-button"
+                            className="accordion-button collapsed"
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#collapseOne"
-                            aria-expanded="true"
+                            aria-expanded="false"
                             aria-controls="collapseOne"
                         >
                             Accordion Item #1

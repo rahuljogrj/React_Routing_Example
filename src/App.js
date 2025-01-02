@@ -44,7 +44,7 @@ function App() {
 
                     <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
+                            <Route path="/about" element={<About likeHeader={"Likes Count"} Likesheadernew={"Likes Count New"} />} />
                             <Route path="/navbar" element={<Navbar />} />
                     </Routes>
 
