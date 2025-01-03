@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import Accordian from './Accordian';
 
 function Carousel() {
-
 
     return (
         <div>
