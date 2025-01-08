@@ -1,13 +1,12 @@
 // Pages/About.js
 import React, { useState } from 'react';
-import ListExample from '../Components/ListExample';
 
 
 function About({ likeHeader, Likesheadernew }) {
 
     const [likes, setLikes] = useState(0);
 
-    const handleClick = () => {
+    const handleClickIncrease = () => {
         setLikes(likes + 1);
     }
 
@@ -15,19 +14,24 @@ function About({ likeHeader, Likesheadernew }) {
         setLikes(0);
     }
 
+    const handleClickDecrease = () => {
+        if (likes == 0) {
+            alert("Likes can not be negative.....")
+            return false;
+        }
+        setLikes(likes - 1);
+    }
+
     return (
         <div>
             <h1>About Us</h1>
-            <p>This is the About Us page content.</p>
+            <hr/>
+            <h3>{likeHeader} : {likes} </h3>
 
-            <h3>Likes </h3>
+            <button className="btn btn-sm btn-primary" onClick={handleClickIncrease}>Likes Increase</button>
+            <button className="btn btn-sm btn-primary ms-3" onClick={handleClickSetZero}>{Likesheadernew}</button>
+            <button className="btn btn-sm btn-primary ms-3" onClick={handleClickDecrease}>Likes Decrease</button>
 
- 
-
-            <button className="btn btn-primary" onClick={handleClick}>{likeHeader} : {likes}</button>
-            <button className="btn btn-primary ms-3" onClick={handleClickSetZero}>{Likesheadernew} : {likes}</button>
-
-          {/*  <ListExample/>*/}
         </div>
     );
 };

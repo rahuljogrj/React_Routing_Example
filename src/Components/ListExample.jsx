@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
 
+import React, { useState, useMemo } from 'react';
+ 
 
 const data = [
     {
@@ -51,34 +52,56 @@ const data = [
     },
 ];
 
-// Generate the list dynamically with href
 function ListExample() {
- 
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const filteredData = useMemo(() => {
+        if (!searchTerm) {
+            return data;
+        }
+
+        return data.map(item => ({
+            ...item,
+            sub: item.sub.filter(subItem =>
+                subItem.text.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+        })).filter(item =>
+            item.main.toLowerCase().includes(searchTerm.toLowerCase()) || item.sub.length > 0
+        );
+    }, [searchTerm]);
+
 
     return (
         <div className="pull-left">
-            <div class="search-container">
-                <input className="form-control searchbar me-2" type="search" id="searchInput" placeholder="Search Menu..." aria-label="Search" />
+            <input
+                type="search"
+                placeholder="Search Menu..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="searchbar"
+            />
+           
+            <ul>
+                {filteredData.map((item, index) => (
+                    <li key={index}>
+                        {item.main}
+                        <ul>
+                            {item.sub.map((subItem, subIndex) => (
+                                <li key={subIndex}>
+                                    <a href={subItem.href}  className="l-link">
+                                        {subItem.text}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </li>
+                ))}
+            </ul>
 
-                 <ul id="itemsList">
-                     {data.map((item, index) =>(
-                         <li key={index}>
-                             {item.main}
-                             <ul>
-                                 {item.sub.map((subItem, subIndex) =>(
-                                     <li key={subIndex}>
-                                         <a href={subItem.href} className="l-link">{subItem.text}</a>
-                                     </li>
-                                 ))}
-                             </ul>
-                         </li>
-                     ))}
 
-
-                 </ul>
-            </div>
         </div>
     );
-};
+}
+
 
 export default ListExample;

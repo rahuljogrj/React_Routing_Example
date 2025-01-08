@@ -14,7 +14,7 @@ function RoutingCompo() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About likeHeader={"Likes Count"} Likesheadernew={"Likes Reset"} />} />
-                    <Route path="/aboutNew" element={<About likeHeader={"New Likes Count"} Likesheadernew={"New Likes Reset"} />} />
+                    <Route path="/aboutNew" element={<About likeHeader={"Likes Count New"} Likesheadernew={"Likes Reset New"} />} />
                     <Route path="/navbar" element={<Navbar />} />
                     <Route path="/IconPage" element={<IconPage />} />
                 </Routes>

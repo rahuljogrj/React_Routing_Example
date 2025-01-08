@@ -18,15 +18,15 @@ function Layout() {
                         <i className="fi fi-sr-menu-burger text-center me-3 pull-right" id="menuToggleButton" data-bs-toggle="collapse" href="#leftNavBar" role="button" aria-expanded="true" aria-controls="leftNavBar"></i>
                     </div>
                 </nav>
-            </div>
 
+            </div>
 
             <div className="combinediv d-flex justify-content-between">
                 <div className="mainDiv col-md-10  col-sm-12">
                     <RoutingCompo/>
                 </div>
 
-                <div className="lnavbar col-md-2 col-sm-12 collapse show collapse-horizontal" id="leftNavBar">
+                <div className="lnavbar bg-primary bg-gradient bg-opacity-50 col-md-2 col-sm-12 collapse show collapse-horizontal" id="leftNavBar">
                     <ListExample />
                 </div>
             </div>
