@@ -1,9 +1,10 @@
 // Pages/Home.js
+import { extend } from 'jquery';
 import React from 'react';
 import Accordian from '../Components/Accordian';
 
 
-const Home = () => {
+function Home () {
     return (
         <div>
             <h1>Welcome to Home Page</h1>
@@ -11,14 +12,10 @@ const Home = () => {
 
             <Accordian />
 
-
-            <h1>Welcome to Flaticon in React!</h1>
-            <i className="fi fi-sr-home"></i> {/* Home Icon */}
-            <i className="fi fi-sr-user"></i> {/* User Icon */}
-            <i className="fi fi-sr-settings"></i> {/* Settings Icon */}
-
         </div>
     );
 };
 
+
 export default Home;
+   

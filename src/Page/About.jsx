@@ -20,12 +20,12 @@ function About({ likeHeader, Likesheadernew }) {
             <h1>About Us</h1>
             <p>This is the About Us page content.</p>
 
-            <h3>{likeHeader}</h3>
+            <h3>Likes </h3>
 
-            <h2>{Likesheadernew}</h2>
+ 
 
-            <button className="btn btn-primary" onClick={handleClick}>Likes: {likes}</button>
-            <button className="btn btn-primary ms-3" onClick={handleClickSetZero}>Reset Likes: {likes}</button>
+            <button className="btn btn-primary" onClick={handleClick}>{likeHeader} : {likes}</button>
+            <button className="btn btn-primary ms-3" onClick={handleClickSetZero}>{Likesheadernew} : {likes}</button>
 
           {/*  <ListExample/>*/}
         </div>

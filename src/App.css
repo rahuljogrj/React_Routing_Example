@@ -116,4 +116,19 @@
 
 
 
+.search-container {
+    margin-bottom: 20px;
+}
 
+.results-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results-container li {
+    margin: 5px 0;
+}
+
+    .results-container li.hidden {
+        display: none;
+    }
