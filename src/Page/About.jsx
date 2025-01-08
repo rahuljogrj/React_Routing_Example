@@ -16,7 +16,6 @@ function About({ likeHeader, Likesheadernew }) {
 
     const handleClickDecrease = () => {
         if (likes == 0) {
-            alert("Likes can not be negative.....")
             return false;
         }
         setLikes(likes - 1);
@@ -28,9 +27,9 @@ function About({ likeHeader, Likesheadernew }) {
             <hr/>
             <h3>{likeHeader} : {likes} </h3>
             <div className="d-flex">
-                <button className="btn btn-sm btn-primary" onClick={handleClickIncrease}>Likes Increase</button>
-                <button className="btn btn-sm btn-primary ms-3" onClick={handleClickSetZero}>{Likesheadernew}</button>
-                <button className="btn btn-sm btn-primary ms-3" onClick={handleClickDecrease}>Likes Decrease</button>
+                <button className="btn btn-sm btn-primary" onClick={handleClickIncrease}>Add Likes +1 </button>
+                <button className="btn btn-sm btn-primary ms-3" onClick={handleClickSetZero}>{Likesheadernew} 0</button>
+                <button className="btn btn-sm btn-primary ms-3" onClick={handleClickDecrease}>Remove Decrease -1</button>
             </div>
         </div>
     );
