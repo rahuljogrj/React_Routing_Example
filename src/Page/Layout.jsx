@@ -12,7 +12,7 @@ function Layout() {
                     <div className="container-fluid ms-3">
                         <a className="navbar-brand" href="/"><b>DR Foundation</b></a>
 
-                        <i class="fi fi-sr-menu-burger text-center me-3 pull-right" id="menuToggleButton" data-bs-toggle="collapse" href="#leftNavBar" role="button" aria-expanded="true" aria-controls="leftNavBar"></i>
+                        <i className="fi fi-sr-menu-burger text-center me-3 pull-right" id="menuToggleButton" data-bs-toggle="collapse" href="#leftNavBar" role="button" aria-expanded="true" aria-controls="leftNavBar"></i>
                     </div>
                 </nav>
             </div>
