@@ -26,7 +26,7 @@ function Layout() {
                     <RoutingCompo/>
                 </div>
 
-                <div className="lnavbar bg-primary bg-gradient bg-opacity-50 col-md-2 col-sm-12 collapse show collapse-horizontal" id="leftNavBar">
+                <div className="lnavbar col-md-2 col-sm-12 collapse show collapse-horizontal" id="leftNavBar">
                     <ListExample />
                 </div>
             </div>

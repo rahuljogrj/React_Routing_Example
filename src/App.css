@@ -34,6 +34,21 @@
         scroll-snap-type: y mandatory; /* Enables scroll snapping */
         scroll-behavior: smooth;
     }
+
+
+    .lnavbar {
+        background-color: #83a7e5;
+        width: 80%;
+        height: 100vh; /* Full viewport height for vertical snapping */
+        padding: 10px 10px 60px 10px;
+        overflow-y: scroll; /* Enables vertical scrolling */
+        scroll-snap-type: y mandatory; /* Enables scroll snapping */
+        position: fixed;
+        right: 0;
+        scroll-behavior: smooth;
+        z-index: 1000;
+    }
+
 }
 
 
